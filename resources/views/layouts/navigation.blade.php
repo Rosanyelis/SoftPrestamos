@@ -26,8 +26,8 @@
 						<div class="hover-scroll-overlay-y my-5 my-lg-5" id="kt_aside_menu_wrapper" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_aside_logo, #kt_aside_footer" data-kt-scroll-wrappers="#kt_aside_menu" data-kt-scroll-offset="0">
 							<!--begin::Menu-->
 							<div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500" id="#kt_aside_menu" data-kt-menu="true" data-kt-menu-expand="false">
-								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-									<span class="menu-link">
+								<div class="menu-item">
+									<a class="menu-link" href="{{ route('dashboard') }}">
 										<span class="menu-icon">
 											<!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
 											<span class="svg-icon svg-icon-2">
@@ -41,82 +41,78 @@
 											<!--end::Svg Icon-->
 										</span>
 										<span class="menu-title">Dashboards</span>
+									</a>
+								</div>
+                                <div class="menu-item">
+									<a class="menu-link" href="{{ route('dashboard') }}">
+										<span class="menu-icon">
+											<!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
+											<i class="fas fa-money-check-alt"></i>
+											<!--end::Svg Icon-->
+										</span>
+										<span class="menu-title">Prestamos</span>
+									</a>
+								</div>
+                                <div class="menu-item">
+									<a class="menu-link" href="{{ route('clientes.index') }}">
+										<span class="menu-icon">
+											<!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
+											<i class="fas fa-users"></i>
+											<!--end::Svg Icon-->
+										</span>
+										<span class="menu-title">Clientes</span>
+									</a>
+								</div>
+								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+									<span class="menu-link">
+										<span class="menu-icon">
+											<i class="fas fa-cogs"></i>
+										</span>
+										<span class="menu-title">Configuración</span>
 										<span class="menu-arrow"></span>
 									</span>
 									<div class="menu-sub menu-sub-accordion menu-active-bg">
 										<div class="menu-item">
-											<a class="menu-link" href="../../demo1/dist/index.html">
+											<a class="menu-link" href="{{ route('moneda.index') }}">
 												<span class="menu-bullet">
 													<span class="bullet bullet-dot"></span>
 												</span>
-												<span class="menu-title">Multipurpose</span>
+												<span class="menu-title">Monedas</span>
 											</a>
 										</div>
 										<div class="menu-item">
-											<a class="menu-link" href="../../demo1/dist/dashboards/ecommerce.html">
+											<a class="menu-link" href="">
 												<span class="menu-bullet">
 													<span class="bullet bullet-dot"></span>
 												</span>
-												<span class="menu-title">eCommerce</span>
+												<span class="menu-title">Contratos</span>
 											</a>
 										</div>
 										<div class="menu-item">
-											<a class="menu-link" href="../../demo1/dist/dashboards/store-analytics.html">
+											<a class="menu-link" href="">
 												<span class="menu-bullet">
 													<span class="bullet bullet-dot"></span>
 												</span>
-												<span class="menu-title">Store Analytics</span>
+												<span class="menu-title">Garantías</span>
 											</a>
 										</div>
 										<div class="menu-item">
-											<a class="menu-link" href="../../demo1/dist/dashboards/logistics.html">
+											<a class="menu-link" href=" {{ route('user.index') }} ">
 												<span class="menu-bullet">
 													<span class="bullet bullet-dot"></span>
 												</span>
-												<span class="menu-title">Logistics</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo1/dist/dashboards/delivery.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Delivery</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo1/dist/dashboards/marketing.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Marketing</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo1/dist/dashboards/online-courses.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Online Courses</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo1/dist/landing.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Landing</span>
+												<span class="menu-title">Usuarios</span>
 											</a>
 										</div>
 									</div>
 								</div>
-								
+
 							</div>
 							<!--end::Menu-->
 						</div>
 						<!--end::Aside Menu-->
 					</div>
 					<!--end::Aside menu-->
-					
+
 				</div>
 

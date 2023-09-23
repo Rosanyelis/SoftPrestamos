@@ -11,11 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('monedas', function (Blueprint $table) {
+        Schema::create('historial_precio', function (Blueprint $table) {
             $table->id();
-            $table->string('tipo_moneda');
-            $table->string('valor');
+            $table->unsignedBigInteger('moneda_id');
+            $table->float('precio', 8, 2);
+            $table->float('variacion', 8, 2);
             $table->timestamps();
+
+            $table->foreign('moneda_id')->references('id')->on('monedas')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
@@ -24,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('monedas');
+        Schema::dropIfExists('historial_precio');
     }
 };

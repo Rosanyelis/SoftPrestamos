@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-	
+
 	<head>
         <base href="../../">
         <meta charset="utf-8" />
@@ -34,6 +34,7 @@
 				<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
 					<!--Header-->
                     @include('layouts.top-navigation')
+                    @include('layouts.modalcalculo')
                     <!--Header-->
                     <!--Content-->
 					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">

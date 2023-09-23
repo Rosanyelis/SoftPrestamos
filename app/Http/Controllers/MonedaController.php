@@ -4,16 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Models\Moneda;
 use Illuminate\Http\Request;
+use Rmunate\EasyDatatable\EasyDataTable;
 
 class MonedaController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
         $data = Moneda::all();
-        return view('currency.index', compact('data'));
+        return view('monedas.index', compact('data'));
     }
 
     /**
@@ -21,7 +23,7 @@ class MonedaController extends Controller
      */
     public function create()
     {
-        //
+        return view('monedas.create');
     }
 
     /**
@@ -29,7 +31,19 @@ class MonedaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'moneda' => ['required', 'unique:monedas'],
+        ],
+        [
+            'moneda.required' => 'El campo Moneda es obligatorio',
+            'moneda.unique' => 'La Moneda ya existe',
+        ]);
+
+        $registro = new Moneda();
+        $registro->moneda = $request->moneda;
+        $registro->save();
+
+        return redirect()->route('moneda.index')->with('success', 'Registro Guardado Exitósamente');
     }
 
     /**

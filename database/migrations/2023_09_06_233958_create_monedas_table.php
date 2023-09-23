@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tipo_prestamos', function (Blueprint $table) {
+        Schema::create('monedas', function (Blueprint $table) {
             $table->id();
-            $table->string('descripcion');
+            $table->string('moneda');
             $table->timestamps();
         });
     }
@@ -23,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tipo_prestamos');
+        Schema::dropIfExists('monedas');
     }
 };

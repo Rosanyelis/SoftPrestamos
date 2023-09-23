@@ -27,20 +27,20 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('admin'), // password
             'remember_token' => Str::random(10),
         ]);
-        \App\Models\User::create([
-            'name' => 'Administrador',
-            'email' => 'administrador@example.com',
-            'email_verified_at' => now(),
-            'password' => Hash::make('admin!'), // password
-            'remember_token' => Str::random(10),
-        ]);
-        $this->call([
-            CategoriaSeeder::class,
-            ModoPagoSeeder::class,
-            MonedaSeeder::class,
-            TasaInteresSeeder::class,
-            SucursalSeeder::class,
-            TipoPrestamoSeeder::class,
-         ]);
+        // \App\Models\User::create([
+        //     'name' => 'Administrador',
+        //     'email' => 'administrador@example.com',
+        //     'email_verified_at' => now(),
+        //     'password' => Hash::make('admin!'), // password
+        //     'remember_token' => Str::random(10),
+        // ]);
+        // $this->call([
+        //     CategoriaSeeder::class,
+        //     ModoPagoSeeder::class,
+        //     MonedaSeeder::class,
+        //     TasaInteresSeeder::class,
+        //     SucursalSeeder::class,
+        //     TipoPrestamoSeeder::class,
+        //  ]);
     }
 }
